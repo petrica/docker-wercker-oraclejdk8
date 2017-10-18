@@ -2,7 +2,7 @@ FROM frolvlad/alpine-oraclejdk8:slim
 
 # Fix env command to also have the --null option
 COPY my_env.sh /usr/local/bin/env
-RUN chmox 0777 /usr/local/bin/env
+RUN chmod 0777 /usr/local/bin/env
 
 RUN apk add --update bash && \
     rm /var/cache/apk/*
